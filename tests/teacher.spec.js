@@ -1,0 +1,55 @@
+import { test, expect } from '@playwright/test'
+
+for (const [label, kind] of [['Cô', 'female'], ['Thầy', 'male']]) {
+  test(`${kind} teacher rows, loses the hat, catches it, and celebrates`, async ({ page }) => {
+    const errors = []
+    page.on('pageerror', error => errors.push(error.message))
+    await page.clock.install({ time: new Date('2026-11-10T00:00:00Z') })
+    await page.clock.pauseAt(new Date('2026-11-10T00:00:01Z'))
+    await page.goto('http://127.0.0.1:5180')
+    await page.locator('[data-action="add-class"]').click()
+    await page.locator('#student-name').fill('Bảo An')
+    await page.locator('[data-action="add-student"]').click()
+    await page.getByRole('button', { name: label, exact: true }).click()
+    await page.getByRole('button', { name: 'Nhanh', exact: true }).click()
+    await page.locator('[data-action="launch"]').click()
+    const actor = page.locator('.teacher-animated'), scene = page.locator('.game'), hat = page.locator('.flying-teacher-hat')
+    await expect(actor).toHaveAttribute('data-teacher-kind', kind)
+    await expect(actor).toHaveAttribute('data-state', 'rowing')
+    await expect(hat).toBeHidden()
+    await page.clock.runFor(1350)
+    expect(Number(await scene.getAttribute('data-rowing-strokes'))).toBeGreaterThanOrEqual(2)
+    await page.screenshot({ path: `tmp/teacher-${kind}-rowing.png` })
+
+    await page.clock.runFor(550)
+    await expect(actor).toHaveAttribute('data-state', 'hat-blown')
+    await expect(actor).toHaveAttribute('data-pose', '2')
+    await expect(hat).toBeVisible()
+    await expect(hat).toHaveAttribute('data-state', 'flying-away')
+    await page.screenshot({ path: `tmp/teacher-${kind}-hat-flying.png` })
+
+    await page.clock.runFor(1500)
+    await expect(actor).toHaveAttribute('data-state', 'storm-rowing')
+    await expect(actor).toHaveAttribute('data-pose', '3')
+    await expect(scene).toHaveAttribute('data-teacher-hat', 'away')
+    await expect(hat).toBeHidden()
+
+    await page.clock.runFor(2200)
+    await expect(actor).toHaveAttribute('data-state', 'catching-hat')
+    await expect(hat).toHaveAttribute('data-state', 'returning')
+    await expect(hat).toBeVisible()
+    await page.screenshot({ path: `tmp/teacher-${kind}-hat-return.png` })
+
+    await page.clock.runFor(900)
+    await expect(actor).toHaveAttribute('data-state', 'relieved')
+    await expect(actor).toHaveAttribute('data-pose', '4')
+    await expect(hat).toBeHidden()
+    await page.clock.runFor(4500)
+    await expect(actor).toHaveAttribute('data-state', 'laughing')
+    await expect(actor).toHaveAttribute('data-pose', '5')
+    await expect(page.locator('.result-overlay')).toBeVisible()
+    await page.getByRole('button', { name: 'Sửa danh sách', exact: true }).click()
+    await expect(page.locator('.flying-teacher-hat')).toHaveCount(0)
+    expect(errors).toEqual([])
+  })
+}

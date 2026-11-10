@@ -1,0 +1,15 @@
+.teacher-picker{display:flex;align-items:center;flex-wrap:wrap;gap:10px 18px;margin:14px 0 8px;padding:10px 12px;border:1px solid #dce7d7;border-radius:10px;background:#f6f7eae6;flex-shrink:0}
+.teacher-picker-heading{display:flex;flex-direction:column;gap:2px;flex:1;min-width:145px}
+.teacher-picker-heading>span{font:700 21px 'Patrick Hand',cursive;color:#286b65}
+.teacher-picker-heading>small{font-size:9px;color:#81948a}
+.teacher-choices{display:flex;gap:8px;flex:2;min-width:250px}
+.teacher-choice{display:flex;align-items:center;gap:9px;flex:1;min-width:0;padding:7px 10px;border:1px solid #d9e5db;border-radius:9px;background:#fffefa;text-align:left;color:#47655d;transition:background .15s,border-color .15s,box-shadow .15s}
+.teacher-choice:hover{border-color:#85ada0}.teacher-choice:focus-visible{outline:2px solid #247d77;outline-offset:3px}
+.teacher-choice.selected{border-color:#dfc36c;background:#fff3c5;box-shadow:0 1px 4px #ab914925}
+.teacher-choice-avatar{display:block;width:43px;height:43px;flex:none;overflow:hidden;border-radius:50%;background:#e9f2e6;border:2px solid #fff;box-shadow:0 1px 3px #34594b22}
+.teacher-choice-avatar img{display:block;width:100%;height:100%;object-fit:contain}
+.teacher-choice-label{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
+.teacher-choice-label strong{font-size:13px;line-height:1.2}.teacher-choice-label small{font-size:9px;white-space:nowrap;color:#8a9a86}
+.teacher-choice-check{display:grid;place-items:center;width:17px;height:17px;flex:none;border-radius:50%;font-size:10px;color:#fff;background:#2c8078;opacity:0}
+.teacher-choice.selected .teacher-choice-check{opacity:1}
+@media(max-width:700px){.teacher-picker{padding:9px;gap:8px}.teacher-picker-heading{min-width:100%}.teacher-choices{min-width:0;width:100%}.teacher-choice{gap:6px;padding:7px}.teacher-choice-avatar{width:33px;height:33px}.teacher-choice-label strong{font-size:12px}.teacher-choice-label small{font-size:8px}.teacher-choice-check{width:14px;height:14px}}

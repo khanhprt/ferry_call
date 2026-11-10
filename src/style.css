@@ -1,0 +1,119 @@
+﻿@import "tailwindcss";
+:root{font-family:'Be Vietnam Pro',sans-serif;color:#244b4a;background:#123c3e;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}.app-shell{min-height:100vh;background:radial-gradient(circle at 50% 0,#28635f 0,#153f40 55%,#103536 100%)}.topbar{height:86px;padding:0 3.2%;display:flex;align-items:center;justify-content:space-between;color:#fff}.brand{display:flex;align-items:center;gap:13px}.brand-icon{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#f5cf65;color:#4d633f;border:3px solid #fff1bf;box-shadow:0 2px 0 #af8e3e}.brand h1{font:700 29px/1 'Patrick Hand',cursive;letter-spacing:.5px;margin:0}.brand p{font-size:9px;letter-spacing:1.1px;text-transform:uppercase;color:#b9d6ce;margin:7px 0 0}.header-right{display:flex;align-items:center;gap:8px}.date{font:17px 'Patrick Hand',cursive;margin-right:12px;color:#e7f2e8;text-transform:capitalize}.top-btn{border:1px solid #69908c;background:#ffffff0b;color:#f0f6ef;border-radius:20px;padding:8px 12px;font-size:10px;display:flex;align-items:center;gap:6px}.top-btn:hover{background:#ffffff20}.workspace{padding:0 3.2% 14px;max-width:1700px;margin:auto}.paper{background-color:#fffef6;background-image:repeating-linear-gradient(transparent 0px,transparent 31px,#e5ede7 32px);border:1px solid #d9e2d8;box-shadow:0 4px 12px #062a2b4d;border-radius:4px;position:relative}.paper:before{content:'';position:absolute;left:25px;top:0;bottom:0;width:1px;background:#eab9b0;opacity:.7;pointer-events:none}.class-bar{min-height:68px;display:flex;align-items:center;gap:17px;padding:12px 16px 12px 42px}.section-label{display:flex;align-items:center;gap:8px;font:700 21px 'Patrick Hand',cursive;white-space:nowrap}.class-tabs{display:flex;gap:6px;flex-wrap:wrap}.class-tab{border:0;background:#e8f1ed;color:#3a7470;border-radius:20px;padding:8px 10px;font-size:11px;font-weight:700}.class-tab.active{background:#217f80;color:white}.class-tab b{background:#ffffff2e;border-radius:12px;padding:2px 6px;margin-left:4px}.class-actions{margin-left:auto;display:flex;align-items:center;gap:7px}.class-actions label{font-size:10px;color:#8b9991}.class-actions input{width:135px}.class-actions input,.name-row input,textarea{border:1px solid #d9e3dd;background:#fffefa;border-radius:6px;padding:10px;color:#345552;outline:none}.class-actions input:focus,.name-row input:focus,textarea:focus{border-color:#299392}.small-btn{border:1px solid #dbe5df;border-radius:20px;background:#fffefa;color:#48625c;padding:8px 11px;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:5px;white-space:nowrap}.small-btn:hover{border-color:#78aca3}.danger{color:#b55c4e}.content-grid{display:grid;grid-template-columns:310px minmax(0,1fr);gap:17px;margin-top:16px}.add-panel,.roster-panel{min-height:590px;padding:25px 18px 19px 42px}.tape{position:absolute;top:-9px;left:43%;width:78px;height:18px;background:#f5d77cba;transform:rotate(-2deg);box-shadow:0 1px 2px #b1984a35}.tape-roster{left:44%;width:92px;transform:rotate(1deg)}.panel-heading,.roster-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.eyebrow{font-size:9px;font-weight:800;letter-spacing:1.5px;color:#a5afa5}.panel-heading h2,.roster-top h2{font:700 25px/1.1 'Patrick Hand',cursive;color:#226b69;margin:5px 0}.panel-heading h2 span{color:#e5b456}.panel-heading p,.roster-top p{font-size:10px;color:#96a49a;margin:6px 0 0}.heading-icon{background:#e7f1e7;border-radius:10px;padding:10px;color:#5a9690}.rule{height:1px;background:#e1e9de;margin:20px 0}.field-label{display:block;font-size:9px;font-weight:800;letter-spacing:1px;color:#718a80;margin-bottom:8px}.name-row{display:flex;gap:6px}.name-row input{min-width:0;width:100%;font-size:11px}.avatar-add{width:38px;height:38px;flex:none;border:1px dashed #a5bdb1;border-radius:50%;display:grid;place-items:center;color:#83a79c}.gender-select{border:0;border-radius:8px;background:#e3f1f9;color:#4f86a4;font-size:10px;font-weight:700;padding:0 8px;display:flex;align-items:center;gap:3px}.gender-select.pink{background:#fce7eb;color:#bb7285}.primary-btn,.outline-teal{border:0;background:#218788;color:white;border-radius:8px;width:100%;padding:11px;margin-top:10px;font-weight:700;font-size:11px;display:flex;justify-content:center;align-items:center;gap:6px}.primary-btn:hover,.outline-teal:hover{background:#176e70}.divider{display:flex;align-items:center;gap:8px;margin:22px 0 13px;color:#a1ada4;font-size:9px;font-weight:700;letter-spacing:.8px;white-space:nowrap}.divider:before,.divider:after{content:'';height:1px;background:#dce5dc;flex:1}.hint{font-size:10px;line-height:1.7;color:#8a9a90;margin:0 0 8px}textarea{width:100%;height:93px;resize:vertical;font-size:11px;line-height:1.6}.outline-teal{width:auto;padding:10px 14px;border-radius:20px;margin-top:7px}.upload-btn{border:1px solid #d7e3dc;background:#fffefa;border-radius:20px;padding:9px 12px;display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;cursor:pointer}.upload-hint{margin-top:10px}.side-note{margin-top:24px;background:#f9f4dd;border:1px dashed #e9dba7;border-radius:8px;padding:12px;display:flex;gap:8px;color:#a88c44}.side-note span{font-size:19px}.side-note p{font:14px/1.35 'Patrick Hand',cursive;margin:0}.roster-panel{display:flex;flex-direction:column}.roster-actions{display:flex;gap:6px}.count{font:700 11px 'Be Vietnam Pro',sans-serif;vertical-align:middle;color:#6b827b;background:#e8efea;border-radius:20px;padding:6px 9px}.notice{background:#fff4c8;color:#9c8550;font-size:10px;padding:10px 12px;border-radius:5px;margin:20px 0 12px}.roster-scroll{flex:1;max-height:390px;overflow:auto;margin:0 -2px 10px 0;padding:2px}.student-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.student-card{display:flex;align-items:center;gap:7px;background:#f1f6f3;border:1px solid #e7eeea;border-radius:8px;padding:6px;min-width:0}.student-card.absent{opacity:.52}.student-avatar{width:32px;height:32px;flex:none;border-radius:50%;border:2px solid white;color:#648b85;font-size:9px;font-weight:800;overflow:hidden;padding:0}.student-avatar img,.result-avatar img{width:100%;height:100%;object-fit:cover}.color-0{background:#e8e8dc}.color-1{background:#c7eaf3}.color-2{background:#f7d1dd}.color-3{background:#dfd0f5}.color-4{background:#c4e9d8}.color-5{background:#f9eaa8}.student-name{font-size:10px;font-weight:700;color:#465f57;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}.sex,.attendance{border:0;border-radius:12px;font-size:9px;font-weight:700;padding:4px 7px;white-space:nowrap}.sex{background:#d5eaf6;color:#5685a0}.sex.girl{background:#f8dbe3;color:#bd778a}.attendance{background:#d3ead7;color:#538764}.attendance.off{background:#ece8df;color:#8c877c}.remove{border:0;background:none;color:#a8b6ae;font-size:16px;padding:0 2px}.empty{text-align:center;padding:65px 10px;color:#98ada2;font-size:35px}.empty h3{font:22px 'Patrick Hand';margin:5px}.empty p{font:11px 'Be Vietnam Pro';margin:0}.bottom-controls{border-top:1px solid #e1e9df;display:flex;align-items:center;gap:22px;padding:13px 0}.option-group{display:flex;align-items:center;gap:5px}.option-group>span{font-size:10px;color:#83948b;margin-right:3px}.pill{border:1px solid #dce7dd;background:#fffef9;color:#71877e;border-radius:20px;padding:7px 11px;font-size:10px;font-weight:700}.pill.selected{background:#fff0b9;border-color:#f0d982;color:#806b31}.ready{margin-left:auto;font-size:10px;color:#87a397}.ready-dot{display:inline-block;width:7px;height:7px;background:#70b986;border-radius:50%;margin-right:4px}.launch{width:100%;border:0;border-radius:9px;background:#d65b48;box-shadow:0 4px 0 #a74134;color:white;padding:13px;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px}.launch:hover{background:#c84f3e}.launch-arrow{margin-left:10px;font-size:18px}footer{text-align:center;color:#9db9ae;font-size:10px;margin:17px 0 0}footer span{color:#ef9c88}footer b{color:#e5ca79;margin-left:5px}
+/* Setup screen: moderately larger, friendly proportions. --z scales the whole screen with the window width. */
+.app-shell{--z:1;zoom:var(--z);min-height:calc(100dvh / var(--z))}
+@media(min-width:1500px){.app-shell{--z:1.1}}
+@media(min-width:1800px){.app-shell{--z:1.15}}
+@media(min-width:2200px){.app-shell{--z:1.4}}
+.topbar{height:88px}.brand-icon{width:48px;height:48px}.brand h1{font-size:31px}.top-btn{font-size:11px;padding:8px 13px}
+.class-bar{min-height:72px}.section-label{font-size:23px}.class-tab{font-size:12px;padding:8px 13px}.class-actions input{font-size:12px}.small-btn{font-size:11px;padding:8px 13px}
+.content-grid{grid-template-columns:minmax(290px,25%) minmax(0,1fr);gap:18px;margin-top:18px}
+.add-panel,.roster-panel{min-height:0;padding:26px 20px 20px 44px}
+.panel-heading h2{font-size:25px}.roster-top h2{font-size:28px}
+.name-row input{font-size:12px;padding:11px}.avatar-add{width:42px;height:42px}
+.primary-btn,.outline-teal{font-size:12.5px;padding:12px}
+.student-grid{gap:9px}
+.student-card{padding:8px 10px;gap:9px;border-radius:12px;background:#eff6f2;border-color:#e0ebe5}
+.student-avatar{width:40px;height:40px;font-size:10px;border-width:3px;box-shadow:0 1px 3px #3a5a5030}
+.student-name{font-size:12.5px}.sex,.attendance{font-size:10px;padding:5px 9px}.remove{font-size:18px}
+@media(max-width:1499px){
+.student-card{display:grid;grid-template-columns:auto auto auto 1fr auto;grid-template-areas:"avatar name name name remove" "avatar sex att . .";align-items:center;column-gap:11px;row-gap:5px;padding:8px 12px}
+.student-avatar{grid-area:avatar;width:44px;height:44px}.student-name{grid-area:name;min-width:0;font-size:13px}.sex{grid-area:sex}.attendance{grid-area:att}.remove{grid-area:remove}
+}
+.bottom-controls{padding:14px 0;flex-wrap:wrap;gap:10px 22px}.option-group{white-space:nowrap}.option-group>span{white-space:nowrap;font-size:11px}.pill{white-space:nowrap;font-size:11px;padding:7px 13px}.ready{font-size:11px}
+.launch{font-size:16px;padding:15px;border-radius:11px}
+.content-grid{height:max(470px,calc(100dvh / var(--z) - 245px))}
+.add-panel{overflow-y:auto;scrollbar-width:thin;scrollbar-color:#b9cfc6 transparent}.add-panel .tape{top:0}
+.roster-scroll{flex:1;min-height:0;max-height:none}
+@media(max-height:820px){.notice,.roster-top p{display:none}}
+@media(max-width:700px){.content-grid{height:auto}.roster-scroll{flex:none}}
+/* Game scene: the river art uses cover so it is never stretched. Every element is placed in % of the scene, so the boat, teacher and passengers keep the reference proportions at any window size. */
+.game{position:fixed;inset:0;overflow:hidden;container-type:size;background:#8bd4e1 url('/river-reference.png') center/cover no-repeat;font-family:'Be Vietnam Pro',sans-serif}
+.game-top{position:absolute;top:1.5%;left:1%;right:1%;z-index:6;display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap}
+.game-chip{display:inline-block;background:#fffef1eb;border:1px solid #fff;border-radius:20px;padding:.45em 1em;color:#344a48;font-size:clamp(9px,.95cqw,13px);font-weight:800;box-shadow:0 2px 5px #38504c44}
+.game-chip b{color:#d45542}
+.game-actions{display:flex;gap:5px;flex-wrap:wrap}
+.journey-title{position:absolute;z-index:5;top:7%;left:0;width:100%;text-align:center;pointer-events:none;font:900 clamp(34px,6cqw,104px)/1 'Be Vietnam Pro',sans-serif;letter-spacing:-.02em;color:#ffdf60;-webkit-text-stroke:3px #30343c;paint-order:stroke fill;text-shadow:3px 4px 0 #30343c}
+.speech{position:absolute;z-index:6;top:33%;left:4%;background:#fff;border:2px solid #5b5d58;border-radius:14px;padding:.5em 1em;color:#40534b;font:700 clamp(11px,1.35cqw,18px)/1.2 'Be Vietnam Pro',sans-serif;box-shadow:0 3px 0 #647e7855;white-space:nowrap}
+.speech:after{content:'';position:absolute;bottom:-12px;left:22px;border-width:12px 9px 0;border-style:solid;border-color:#5b5d58 transparent transparent}
+.boat-wrap{position:absolute;inset:0;z-index:2}
+.boat-stage{position:absolute;animation:boat-bob 3s ease-in-out infinite}
+.ferry-assembly{left:-.7%;top:50.5%;width:71.6%;aspect-ratio:3 / 1;transform-origin:50% 80%;isolation:isolate}
+.ferry-layer{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;user-select:none}
+.ferry-rear{z-index:0}
+.ferry-occupants{position:absolute;inset:0;z-index:1}
+.ferry-front{z-index:2}
+.teacher-character{position:absolute;z-index:5;left:1.5%;top:42.6%;width:15.2%;transform-origin:50% 90%;animation:teacher-sway 2.8s ease-in-out infinite}
+.teacher-character img{display:block;width:100%;height:auto;filter:drop-shadow(1px 2px 0 #603f2b44)}
+.passengers{position:absolute;inset:0;z-index:3}
+.passenger{position:absolute;left:var(--left);bottom:var(--bottom);width:var(--size);z-index:var(--layer);transform:translateX(-50%);transform-origin:bottom center;animation:pupil-bob 1.9s ease-in-out var(--delay) infinite}
+.passenger img{display:block;width:100%;height:auto;filter:drop-shadow(1px 1px 0 #57362e55)}
+.passenger-name{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);margin-bottom:2px;padding:1px 5px;background:#fff;border:1px solid #777;border-radius:8px;white-space:nowrap;font:700 clamp(7px,.8cqw,11px) 'Be Vietnam Pro',sans-serif;color:#514b40}
+.hide-names .passenger-name{display:none}
+.passenger.disembark{animation:leave-boat .65s ease-in forwards;pointer-events:none}
+.journey-log{position:absolute;left:1%;bottom:2%;z-index:6;display:flex;flex-direction:column;gap:3px}
+.journey-log span{display:block;min-width:9cqw;background:#f8ffffd9;border-radius:5px;padding:.25em .6em;font-size:clamp(8px,.9cqw,12px);font-weight:700;color:#4b6767;box-shadow:0 1px 2px #4b6c6d4d}
+.storm .boat-stage{animation:storm-bob .7s ease-in-out infinite}
+.result-overlay{position:absolute;inset:0;background:#102b2baf;z-index:7;display:grid;place-items:center}
+.chalkboard{width:min(580px,90vw);position:relative;text-align:center;background:radial-gradient(circle at top,#346451,#174537);border:10px solid #9d623b;outline:4px solid #69452e;border-radius:5px;padding:32px 30px 28px;color:#fffdf0;box-shadow:0 12px 35px #102c28a3}
+.board-tag{position:absolute;top:-20px;left:50%;transform:translateX(-50%);background:#cf5747;color:white;border-radius:20px;padding:7px 20px;font-size:10px;font-weight:800;letter-spacing:1px;white-space:nowrap}
+.result-avatar{width:100px;height:100px;border-radius:50%;margin:0 auto 15px;background:#ffe9a5;border:5px solid #fff5cf;outline:2px dashed #f2d77d;display:grid;place-items:center;color:#638e79;font:700 30px 'Patrick Hand';overflow:hidden}
+.result-avatar img{width:100%;height:100%;object-fit:cover}
+.board-intro{font-size:9px;letter-spacing:2px;color:#a8c4ad;font-weight:800}
+.chalkboard h2{font:48px 'Patrick Hand';margin:3px 0 8px}
+.board-message{font:21px 'Patrick Hand';color:#f8dc72;margin:0}
+.board-small{font-size:10px;color:#bbd0bd;margin:13px 0 22px}
+.result-buttons{display:flex;justify-content:center;gap:7px;flex-wrap:wrap}
+.result-buttons button{border:1px solid #a9c6af;color:white;border-radius:20px;background:transparent;padding:10px 14px;font-size:10px;font-weight:700;display:flex;gap:5px;align-items:center}
+.result-buttons .result-primary{background:#f5d65e;color:#44523b;border-color:#f5d65e}
+.confetti{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.confetti i{position:absolute;left:var(--x);top:-10%;width:5px;height:11px;background:#f5de85;animation:fall 3s linear var(--d) infinite;transform:rotate(calc(var(--i)*30deg))}
+.confetti i:nth-child(3n){background:#fff}
+.confetti i:nth-child(3n+1){background:#ed8c7b}
+@keyframes boat-bob{0%,100%{transform:translateY(0) rotate(-.6deg)}50%{transform:translateY(-.8cqh) rotate(.6deg)}}
+@keyframes storm-bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-1.5cqh) rotate(2deg)}}
+@keyframes pupil-bob{0%,100%{transform:translateX(-50%) rotate(-2deg)}50%{transform:translateX(-50%) translateY(-4px) rotate(2deg)}}
+@keyframes leave-boat{to{opacity:0;transform:translateX(-50%) translate(90%,-70%) scale(.45)}}
+@keyframes teacher-sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+@keyframes fall{to{top:110%;transform:translateX(60px) rotate(540deg)}}
+@media(max-width:1000px){.student-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.content-grid{grid-template-columns:270px minmax(0,1fr)}.class-actions label,.date,.ready{display:none}.topbar{padding:0 2%}.workspace{padding-left:2%;padding-right:2%}}
+@media(max-width:700px){.topbar{height:auto;padding:15px;gap:10px}.brand h1{font-size:24px}.brand p,.top-btn span{display:none}.top-btn{padding:9px}.class-bar{align-items:flex-start;flex-wrap:wrap;padding-left:38px}.class-actions{width:100%;margin:0;flex-wrap:wrap}.class-actions input{flex:1}.content-grid{grid-template-columns:1fr}.add-panel,.roster-panel{min-height:auto}.roster-panel{min-height:530px}.student-grid{grid-template-columns:1fr}.roster-scroll{max-height:360px}.bottom-controls{flex-wrap:wrap;gap:8px}}
+@media(max-width:700px){.game-top{flex-direction:column;align-items:flex-start}.game-chip{font-size:9px;padding:6px 9px}.journey-title{top:16%}.speech{top:30%}.journey-log span{min-width:24cqw}.chalkboard h2{font-size:38px}}
+
+/* Each pupil keeps the same face in seated and walking poses. */
+.passenger{top:var(--top);bottom:auto;width:var(--size);transform:translate(-50%,-100%);animation:none;isolation:isolate}
+.seated-character{position:relative;transform-origin:50% 97%;animation:seated-rock var(--idle-period,3.2s) ease-in-out var(--delay) infinite}
+.passenger .seated-sprite{width:100%;height:auto;display:block;filter:drop-shadow(0 1px 0 #55392d66)}
+.passenger-name{bottom:97%;margin-bottom:0;font-size:clamp(7px,.77cqw,11px);line-height:1.25;padding:1px 4px;box-shadow:0 1px 1px #20352e30;z-index:2}
+.passenger.seat-vacated{visibility:hidden;pointer-events:none}
+.hide-names .passenger-name{display:none}
+.shore-passengers{position:absolute;inset:0;z-index:5;pointer-events:none;overflow:hidden}
+.shore-student{position:absolute;width:7cqw;height:15cqh;transform-origin:50% 100%;will-change:left,top,transform}
+.shore-student .passenger-name{bottom:100%;font-size:clamp(8px,.8cqw,11px)}
+.walk-frame{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;animation:walking-frame .34s steps(1,end) infinite;filter:drop-shadow(0 2px 1px #25433235)}
+.walk-frame-2{animation-delay:-.17s}
+.shore-student:after{content:'';position:absolute;bottom:-2%;left:25%;right:25%;height:5%;border-radius:50%;background:#285b5330;z-index:-1}
+.sleepy-student .seated-character{animation:sleepy-nod 2s ease-in-out infinite}
+.sleepy-student:after{content:'z Z';position:absolute;right:-35%;top:-25%;color:#fff;font-size:clamp(15px,1.8cqw,28px);font-weight:800;text-shadow:1px 2px #455b59;animation:sleepy-letters 1.8s ease-out infinite}
+@keyframes seated-rock{0%,100%{transform:rotate(0)}25%{transform:rotate(var(--idle-lean,1.5deg))}50%{transform:translateY(-1px)}75%{transform:rotate(calc(var(--idle-lean,1.5deg) * -1))}}
+@keyframes walking-frame{0%{opacity:1;transform:translateY(0) rotate(-1deg)}50%{opacity:0;transform:translateY(-3px) rotate(1deg)}}
+@keyframes sleepy-nod{50%{transform:rotate(5deg) translateY(3px)}}
+@keyframes sleepy-letters{from{opacity:0;transform:translateY(5px)}40%{opacity:1}to{opacity:0;transform:translateY(-15px)}}
+
+/* Keep scene coordinates consistent with the artwork, including on phones. */
+/* The 16:9 scene covers the window, so no empty bars appear on wide screens. Crop is biased to the right and the top, which hold the least important art. Portrait windows keep the whole scene (contain). */
+.game{--sw:max(100vw,177.7778dvh);--sh:max(100dvh,56.25vw);--ox-l:max(0px,calc((var(--sw) - 100vw) * .35));--ox-r:max(0px,calc((var(--sw) - 100vw) * .65));--oy-t:max(0px,calc((var(--sh) - 100dvh) * .75));--oy-b:max(0px,calc((var(--sh) - 100dvh) * .25));inset:auto;left:calc((100vw - var(--sw)) * .35);top:calc((100dvh - var(--sh)) * .75);width:var(--sw);height:var(--sh);background-size:100% 100%}
+@media(max-aspect-ratio:3/2){.game{--sw:min(100vw,177.7778dvh);--sh:min(100dvh,56.25vw);left:50%;top:50%;transform:translate(-50%,-50%)}}
+.game-top{top:calc(var(--oy-t) + 1.5cqh);left:calc(var(--ox-l) + 1cqw);right:calc(var(--ox-r) + 1cqw)}
+.journey-title{top:calc(var(--oy-t) + 5cqh)}
+.journey-log{left:calc(var(--ox-l) + 1cqw);bottom:calc(var(--oy-b) + 2cqh)}
+@media(max-width:700px){.game-top{flex-direction:row;gap:3px}.game-chip{font-size:clamp(5px,.95cqw,9px);padding:4px 5px}.game-actions{gap:2px}.journey-title{top:12%;font-size:7cqw;-webkit-text-stroke:1.5px #30343c}.speech{top:33%;font-size:1.35cqw;padding:.5em 1em;border-width:1px}.speech:after{bottom:-6px;border-width:6px 4px 0}.passenger-name,.shore-student .passenger-name{font-size:clamp(4px,.77cqw,11px);padding:0 2px;border-width:.5px}.journey-log span{font-size:1.2cqw;min-width:12cqw}.teacher-character{top:42.6%;left:1.5%;width:15.2%}}
+/* Occupant anchors are relative to the same canvas as both hull layers. */
+.ferry-assembly .ferry-teacher{left:3.07%;top:-18.62%;width:21.23%;transform-origin:50% 95%}
+.passenger:before{content:'';position:absolute;left:25%;right:25%;bottom:0;height:5%;background:#55341e33;border-radius:50%;filter:blur(1px);z-index:-1}
+.idle-curious .seated-sprite{transform-origin:50% 90%;animation:student-glance calc(var(--idle-period) * 2.3) ease-in-out var(--delay) infinite}
+.idle-settle .seated-sprite{transform-origin:50% 100%;animation:student-settle calc(var(--idle-period) * 1.8) ease-in-out var(--delay) infinite}
+.storm .seated-character{animation-duration:calc(var(--idle-period) * .45)}
+@keyframes student-glance{0%,55%,100%{transform:rotate(0)}65%,72%{transform:rotate(-2deg) translateX(-1px)}82%,88%{transform:rotate(1.5deg)}}
+@keyframes student-settle{0%,58%,80%,100%{transform:scaleY(1)}65%{transform:scaleY(.975)}72%{transform:scaleY(1.01)}}
+

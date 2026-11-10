@@ -1,0 +1,12 @@
+.ferry-assembly .teacher-animated.ferry-teacher{left:0;top:-23%;width:31%;transform-origin:43% 94%}
+.teacher-animated .teacher-sprite{display:block;width:100%;height:auto;transform-origin:43% 94%}
+.teacher-animated[data-state='rowing'] .teacher-sprite{animation:teacher-rowing 1.04s ease-in-out infinite}
+.teacher-animated[data-state='storm-rowing'] .teacher-sprite{animation:teacher-storm-rowing .95s ease-in-out infinite}
+.teacher-animated[data-state='hat-blown'] .teacher-sprite{animation:teacher-startled .38s ease-out}
+.teacher-animated[data-state='laughing'] .teacher-sprite{animation:teacher-chuckle .8s ease-in-out infinite}
+.flying-teacher-hat{position:absolute;height:auto;z-index:4;pointer-events:none;user-select:none;visibility:hidden;opacity:0;transform-origin:50% 45%;filter:brightness(calc(1 - var(--storm-strength,0) * .18));will-change:left,top,transform}
+@keyframes teacher-rowing{0%,100%{transform:rotate(-1.1deg)}50%{transform:rotate(1.1deg) translateY(1px)}}
+@keyframes teacher-storm-rowing{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(1.8deg) translateY(2px)}}
+@keyframes teacher-startled{0%{transform:scaleY(.97)}45%{transform:rotate(-3deg) scaleY(1.025)}100%{transform:none}}
+@keyframes teacher-chuckle{50%{transform:translateY(2px) rotate(1deg)}}
+
