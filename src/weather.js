@@ -4,7 +4,7 @@ import { createRiverLife, renderRiverLife } from './river-life.js'
 import { createTeacher } from './teacher.js'
 import './weather.css'
 
-export const weatherReady = Promise.all(['/weather/wave-cycle.png', '/weather/jumping-fish.png', '/weather/clouds.png'].map(source => {
+export const weatherReady = Promise.all([`${import.meta.env.BASE_URL}weather/wave-cycle.png`, `${import.meta.env.BASE_URL}weather/jumping-fish.png`, `${import.meta.env.BASE_URL}weather/clouds.png`].map(source => {
   const image = new Image()
   image.src = source
   return image.decode()

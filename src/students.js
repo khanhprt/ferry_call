@@ -1,5 +1,5 @@
 const atlas = new Image()
-atlas.src = '/students/classmates.png'
+atlas.src = `${import.meta.env.BASE_URL}students/classmates.png`
 
 // All three poses in a column belong to the same child. Trim transparent cell
 // margins at load time so the feet and head sizes line up across poses.
@@ -33,7 +33,7 @@ export function studentVariant(student) {
 }
 
 export function studentImage(student, pose = 0) {
-  return sprites?.[studentVariant(student)]?.[pose] || `/${student.gender === 'Nữ' ? 'girl' : 'boy'}-reference.png`
+  return sprites?.[studentVariant(student)]?.[pose] || `${import.meta.env.BASE_URL}${student.gender === 'Nữ' ? 'girl' : 'boy'}-reference.png`
 }
 
 export function seatedLayout(students) {

@@ -2,7 +2,7 @@ import './teacher.css'
 
 const sprites = { female: [], male: [] }
 const portraits = {}
-const sources = { female: '/teachers/female-states.png', male: '/teachers/male-states.png' }
+const sources = { female: `${import.meta.env.BASE_URL}teachers/female-states.png`, male: `${import.meta.env.BASE_URL}teachers/male-states.png` }
 
 export const teachersReady = Promise.all([
   ...Object.entries(sources).map(async ([kind, source]) => {
@@ -23,11 +23,11 @@ export const teachersReady = Promise.all([
     portrait.getContext('2d').drawImage(image, width * .1, height * 2, width * .72, height * .72, 0, 0, 96, 96)
     portraits[kind] = portrait.toDataURL('image/png')
   }),
-  (async () => { const hat = new Image(); hat.src = '/teachers/flying-hat.png'; await hat.decode() })(),
+  (async () => { const hat = new Image(); hat.src = `${import.meta.env.BASE_URL}teachers/flying-hat.png`; await hat.decode() })(),
 ])
 
 export function teacherPortrait(kind) {
-  return portraits[kind] || `/teacher-${kind}-reference.png`
+  return portraits[kind] || `${import.meta.env.BASE_URL}teacher-${kind}-reference.png`
 }
 
 export function renderTeacher(teacher) {
@@ -39,7 +39,7 @@ export function createTeacher(scene, { duration, reducedMotion }) {
   const actor = scene.querySelector('.teacher-animated'), image = actor.querySelector('.teacher-sprite')
   const kind = actor.dataset.teacherKind, title = kind === 'female' ? 'Cô' : 'Thầy'
   const hat = document.createElement('img')
-  hat.className = 'flying-teacher-hat'; hat.src = '/teachers/flying-hat.png'; hat.alt = ''; hat.setAttribute('aria-hidden', 'true')
+  hat.className = 'flying-teacher-hat'; hat.src = `${import.meta.env.BASE_URL}teachers/flying-hat.png`; hat.alt = ''; hat.setAttribute('aria-hidden', 'true')
   scene.append(hat)
   let pose = -1, laughing = false, disposed = false, lostLogged = false, returnedLogged = false
   scene.dataset.rowingStrokes = '0'

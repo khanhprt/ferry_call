@@ -4,7 +4,7 @@ import './finale.css'
 const frames = [], portraits = []
 const poseIndex = { sleeping: 0, waking: 1, awake: 2 }
 const sheet = new Image()
-sheet.src = '/students/finale.png'
+sheet.src = `${import.meta.env.BASE_URL}students/finale.png`
 
 export const finaleReady = sheet.decode().then(() => {
   const canvas = document.createElement('canvas'), context = canvas.getContext('2d', { willReadFrequently: true })

@@ -28,7 +28,7 @@
 @media(max-height:820px){.notice,.roster-top p{display:none}}
 @media(max-width:700px){.content-grid{height:auto}.roster-scroll{flex:none}}
 /* Game scene: the river art uses cover so it is never stretched. Every element is placed in % of the scene, so the boat, teacher and passengers keep the reference proportions at any window size. */
-.game{position:fixed;inset:0;overflow:hidden;container-type:size;background:#8bd4e1 url('/river-reference.png') center/cover no-repeat;font-family:'Be Vietnam Pro',sans-serif}
+.game{position:fixed;inset:0;overflow:hidden;container-type:size;background:#8bd4e1 url('../river-reference.png') center/cover no-repeat;font-family:'Be Vietnam Pro',sans-serif}
 .game-top{position:absolute;top:1.5%;left:1%;right:1%;z-index:6;display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap}
 .game-chip{display:inline-block;background:#fffef1eb;border:1px solid #fff;border-radius:20px;padding:.45em 1em;color:#344a48;font-size:clamp(9px,.95cqw,13px);font-weight:800;box-shadow:0 2px 5px #38504c44}
 .game-chip b{color:#d45542}

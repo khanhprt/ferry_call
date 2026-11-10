@@ -1,12 +1,12 @@
 import './harbor.css'
 
-export const harborReady = Promise.all(['/scene/river-open.png', '/scene/dock.png'].map(source => {
+export const harborReady = Promise.all([`${import.meta.env.BASE_URL}scene/river-open.png`, `${import.meta.env.BASE_URL}scene/dock.png`].map(source => {
   const image = new Image(); image.src = source
   return image.decode()
 }))
 
 export function renderHarbor() {
-  return '<div class="arrival-dock" data-state="hidden" aria-hidden="true"><img src="/scene/dock.png" alt=""></div>'
+  return `<div class="arrival-dock" data-state="hidden" aria-hidden="true"><img src="${import.meta.env.BASE_URL}scene/dock.png" alt=""></div>`
 }
 
 export function createHarbor(scene) {

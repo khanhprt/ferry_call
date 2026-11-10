@@ -1,4 +1,4 @@
-.game{background-image:url('/scene/river-open.png')}
+.game{background-image:url('../scene/river-open.png')}
 .boat-wrap{transform:translateX(var(--boat-shift,14.9%))}
 .speech{left:calc(4% + var(--boat-shift,14.9%))}
 .arrival-dock{position:absolute;inset:0;z-index:1;visibility:hidden;opacity:0;pointer-events:none;user-select:none;will-change:opacity,transform;filter:brightness(calc(1 - var(--storm-strength,0) * .25))}

@@ -1,8 +1,8 @@
 import { teachersReady, renderTeacher } from './teacher.js'
 
 export const boatLayers = {
-  rear: '/boat/rear.png',
-  front: '/boat/front.png',
+  rear: `${import.meta.env.BASE_URL}boat/rear.png`,
+  front: `${import.meta.env.BASE_URL}boat/front.png`,
 }
 
 // Decode both registered PNGs before showing the assembled boat.
