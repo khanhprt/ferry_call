@@ -1,3 +1,4 @@
+import { t, tr } from './i18n.js'
 import { studentImage, studentVariant } from './students.js'
 import './finale.css'
 
@@ -41,7 +42,7 @@ export const winnerPortrait = student => portraits[studentVariant(student)] || s
 
 export function sleepStudent(seat, student) {
   seat.querySelector('.seated-sprite').src = finaleImage(student, 'sleeping')
-  seat.querySelector('.seated-sprite').alt = `${student.name} đang ngủ quên trên đò`
+  seat.querySelector('.seated-sprite').alt = tr`${student.name} đang ngủ quên trên đò`
   seat.classList.add('sleepy-student')
   seat.dataset.studentState = 'sleeping'
   seat.dataset.characterVariant = String(studentVariant(student))
@@ -57,13 +58,13 @@ export function createWinnerFinale(scene, student, { onWake }) {
   scene.append(vignette)
   const glow = document.createElement('div')
   glow.className = 'winner-glow'; glow.setAttribute('aria-hidden', 'true')
-  glow.innerHTML = [[12, 40], [80, 20], [92, 65], [27, 12], [52, 4]].map(([x, y], index) => `<i style="left:${x}%;top:${y}%;--twinkle-delay:${index * -.29}s">✦</i>`).join('')
+  glow.innerHTML = [[12, 40], [80, 20], [92, 65], [27, 12], [52, 4]].map(([x, y], index) => tr`<i style="left:${x}%;top:${y}%;--twinkle-delay:${index * -.29}s">✦</i>`).join('')
   const dialog = document.createElement('div')
   dialog.className = 'winner-dialog'
   seat.append(glow, dialog)
   seat.classList.add('winner-student')
   scene.classList.add('winner-focused')
-  speech.textContent = `${student.name.split(' ').slice(-2).join(' ')} ơi, tới bờ rồi con!`
+  speech.textContent = tr`${student.name.split(' ').slice(-2).join(' ')} ơi, tới bờ rồi con!`
   let resolveFinished
   const finished = new Promise(resolve => { resolveFinished = resolve })
   let frame = 0, state = '', done = false
@@ -75,9 +76,9 @@ export function createWinnerFinale(scene, student, { onWake }) {
     seat.dataset.studentState = next
     scene.dataset.finaleStage = next
     image.src = finaleImage(student, next)
-    image.alt = `${student.name} ${next === 'sleeping' ? 'đang ngủ quên' : next === 'waking' ? 'đang dụi mắt tỉnh dậy' : 'đã tỉnh dậy'}`
+    image.alt = `${student.name} ${next === 'sleeping' ? t('đang ngủ quên') : next === 'waking' ? t('đang dụi mắt tỉnh dậy') : t('đã tỉnh dậy')}`
     seat.classList.toggle('sleepy-student', next === 'sleeping')
-    dialog.textContent = next === 'waking' ? 'Ơ… tới bờ rồi ạ?' : next === 'awake' ? 'Dạ… em dậy rồi ạ!' : ''
+    dialog.textContent = next === 'waking' ? t('Ơ… tới bờ rồi ạ?') : next === 'awake' ? t('Dạ… em dậy rồi ạ!') : ''
     dialog.hidden = next === 'sleeping'
     if (next === 'waking') onWake?.()
   }
@@ -106,7 +107,7 @@ export function createWinnerFinale(scene, student, { onWake }) {
     if (!scene.isConnected) return finish(false)
     const elapsed = now - start
     setState(elapsed < 1450 ? 'sleeping' : elapsed < 2100 ? 'waking' : 'awake')
-    title.textContent = elapsed < 650 ? 'Ai còn trên đò?' : ''
+    title.textContent = elapsed < 650 ? t('Ai còn trên đò?') : ''
     positionFocus()
     if (elapsed >= 3300) return finish(true)
     frame = requestAnimationFrame(draw)

@@ -1,3 +1,4 @@
+import { tr } from './i18n.js'
 const atlas = new Image()
 atlas.src = `${import.meta.env.BASE_URL}students/classmates.png`
 
@@ -75,7 +76,7 @@ export function walkToShore(student, seat, scene, onShore) {
   for (let pose = 1; pose <= 2; pose++) {
     const image = document.createElement('img')
     image.src = studentImage(student, pose)
-    image.alt = pose === 1 ? `${student.name} đang lên bờ` : ''
+    image.alt = pose === 1 ? tr`${student.name} đang lên bờ` : ''
     image.className = `walk-frame walk-frame-${pose}`
     walker.append(image)
   }

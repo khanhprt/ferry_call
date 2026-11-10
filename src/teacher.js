@@ -1,8 +1,9 @@
+import { t, tr } from './i18n.js'
 import './teacher.css'
 
 const sprites = { female: [], male: [] }
 const portraits = {}
-const sources = { female: `${import.meta.env.BASE_URL}teachers/female-states.png`, male: `${import.meta.env.BASE_URL}teachers/male-states.png` }
+const sources = { female: `${import.meta.env.BASE_URL}teachers/female-states-red.png`, male: `${import.meta.env.BASE_URL}teachers/male-states.png` }
 
 export const teachersReady = Promise.all([
   ...Object.entries(sources).map(async ([kind, source]) => {
@@ -27,12 +28,12 @@ export const teachersReady = Promise.all([
 ])
 
 export function teacherPortrait(kind) {
-  return portraits[kind] || `${import.meta.env.BASE_URL}teacher-${kind}-reference.png`
+  return portraits[kind] || sources[kind]
 }
 
 export function renderTeacher(teacher) {
   const kind = teacher === 'Cô' ? 'female' : 'male'
-  return `<div class="ferry-teacher teacher-character teacher-animated" data-teacher-kind="${kind}" data-state="rowing" data-pose="0"><img class="teacher-sprite" src="${sprites[kind][0]}" alt="${teacher} đang chèo đò"></div>`
+  return tr`<div class="ferry-teacher teacher-character teacher-animated" data-teacher-kind="${kind}" data-state="rowing" data-pose="0"><img class="teacher-sprite" src="${sprites[kind][0]}" alt="${t(teacher)} đang chèo đò"></div>`
 }
 
 export function createTeacher(scene, { duration, reducedMotion }) {
@@ -53,7 +54,7 @@ export function createTeacher(scene, { duration, reducedMotion }) {
     }
     actor.dataset.state = state
     scene.dataset.teacherState = state
-    image.alt = `${title} ${state === 'rowing' || state === 'storm-rowing' ? 'đang chèo đò' : state === 'hat-blown' ? 'bị gió thổi bay nón' : state === 'catching-hat' ? 'đang đón nón bay về' : state === 'laughing' ? 'đang cười vui' : 'đang vẫy tay'}`
+    image.alt = `${t(title)} ${state === 'rowing' || state === 'storm-rowing' ? t('đang chèo đò') : state === 'hat-blown' ? t('bị gió thổi bay nón') : state === 'catching-hat' ? t('đang đón nón bay về') : state === 'laughing' ? t('đang cười vui') : t('đang vẫy tay')}`
   }
 
   function note(text) {
@@ -95,8 +96,8 @@ export function createTeacher(scene, { duration, reducedMotion }) {
       else if (progress < .7) { setPose(3, 'storm-rowing'); hideHat('away') }
       else if (progress < .84) { setPose(2, 'catching-hat'); flyHat((progress - .7) / .14, true) }
       else { setPose(4, progress >= 1 ? 'docked' : 'relieved'); hideHat('worn') }
-      if (progress >= .22 && !lostLogged) { note(`Gió thổi bay nón của ${title.toLowerCase()}!`); lostLogged = true }
-      if (progress >= .84 && !returnedLogged) { note(`Nón của ${title.toLowerCase()} bay về rồi!`); returnedLogged = true }
+      if (progress >= .22 && !lostLogged) { note(tr`Gió thổi bay nón của ${t(title)}!`); lostLogged = true }
+      if (progress >= .84 && !returnedLogged) { note(tr`Nón của ${t(title)} bay về rồi!`); returnedLogged = true }
     },
     celebrate() { if (!disposed) { laughing = true; setPose(5, 'laughing'); hideHat('worn') } },
     dispose() { disposed = true; hat.remove() },

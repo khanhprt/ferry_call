@@ -1,4 +1,6 @@
 .ferry-assembly .teacher-animated.ferry-teacher{left:0;top:-23%;width:31%;transform-origin:43% 94%}
+/* The wider stance needs more room inside the curved stern in every pose. */
+.ferry-assembly .teacher-animated[data-teacher-kind='male']{left:3.5%}
 .teacher-animated .teacher-sprite{display:block;width:100%;height:auto;transform-origin:43% 94%}
 .teacher-animated[data-state='rowing'] .teacher-sprite{animation:teacher-rowing 1.04s ease-in-out infinite}
 .teacher-animated[data-state='storm-rowing'] .teacher-sprite{animation:teacher-storm-rowing .95s ease-in-out infinite}
